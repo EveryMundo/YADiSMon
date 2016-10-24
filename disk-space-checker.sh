@@ -19,5 +19,5 @@ if [ "$N" -gt "$THRESHOLD" ]; then
 
   df -h | grep -P '/$' | ./disk-space-to-slack.js
 else
-  echo "$N < $THRESHOLD ok"
+  echo "$(date) $N < $THRESHOLD ok"
 fi;
