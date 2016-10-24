@@ -4,12 +4,30 @@ Yet another Linus Disk Space Monitor
 
 Monitors disk space of a linux server and sends alerts via slack when necessary.
 
+## Table of Contents
+ - [Requrirements](#requrirements)
+   - [Linux Server](#linux-server)
+   - [Git](#git)
+   - [Node.js](#nodejs)
+   - [A Slack account](#a-slack-account)
+   - [Internet connection](#internet-connection)
+ - [Installation](#installation)
+   - [Summary of steps](#summary-of-steps)
+ - [License](#license)
+ - [Running tests](#running-tests)
+ - [Problems](#problems)
+
 ## Requirements
 
 ### Linux Server
 
 I haven't tested this on any other unix flavored system.
 It might work, but it might not.
+
+### Git
+
+You will need git to be able to clone this repo and, in the future, to be able to update the code via git pull.
+If you don't want to install git you can just download the [zip version](https://github.com/EveryMundo/YADiSMon/archive/master.zip) of this.
 
 ### Node.js
 
@@ -43,13 +61,14 @@ Without it the script will not be able to send the message to slack.
 8. Test the integration by running the the script disk-space-checker.sh passing 0 as the threshold for disk usage. This way, if you are using more than 0% of the disk, it should send you a message on slack.
   `./disk-space-checker.sh 0`
 
-##### Above Operations
+### Summary of steps
 ```
 git clone https://github.com/EveryMundo/YADiSMon.git
 cd YADiSMon
 npm install --prod
 mkdir logs
-cp .env-dist .env
+cp .env-dist .env #then you configure it before running the next command
+./disk-space-checker.sh 0
 ```
 
 ### Create a Slack Bot User
