@@ -1,0 +1,26 @@
+{
+  "name": "monitor-disk-space",
+  "version": "0.0.1",
+  "description": "Sends message to slack whenever available disk space goes over a given threshold",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EveryMundo/YADiSMon.git"
+  },
+  "keywords": [
+    "monitor",
+    "slack"
+  ],
+  "author": "Daniel Santana",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EveryMundo/YADiSMon/issues"
+  },
+  "homepage": "https://github.com/EveryMundo/YADiSMon#readme",
+  "dependencies": {
+    "dotenv": "^2.0.0"
+  }
+}

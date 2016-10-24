@@ -1,0 +1,10 @@
+#!/bin/bash
+
+cd $(dirname $0)
+
+M=$([ "$2" != "" ] && echo "/$2")
+
+echo
+echo "*$M *  *   *   *     cd $PWD; ./disk-space-checker.sh $1 >> logs/disk-space-checker.sh 2>&1"
+echo
+
