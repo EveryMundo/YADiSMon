@@ -37,6 +37,11 @@ We strongly recommend you to install it via [nvm](https://github.com/creationix/
 
 Installation link: https://github.com/creationix/nvm#install-script
 
+1. Log in to your server
+2. Install nvm: https://github.com/creationix/nvm#install-script
+3. Log out from your server and log back in again (or just start a new shell session)
+4. Install the stable version of Node.js: `nvm install stable`
+
 ### A [Slack](http://slack.com) account
 
 You need to have a slack team to be able to be notified via slack.
