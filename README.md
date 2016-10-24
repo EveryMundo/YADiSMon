@@ -33,13 +33,14 @@ Without it the script will not be able to send the message to slack.
 
 1. Clone this repo with: `git clone https://github.com/EveryMundo/YADiSMon.git`
 2. Enter the directory: `cd YADiSMon`
-3. Create a logs directory: `mkdir logs`
-4. Copy the .env-sample to a .env file: `cp .env-dist .env`
-5. Set the SLACK_CHANNEL variable in your .env file. (or leave it as #general)
-6. Set the SLACK_TOKEN variable within the .env file using your preferred text editor.
+3. Install npm production packages: `npm install --prod`
+4. Create a logs directory: `mkdir logs`
+5. Copy the .env-sample to a .env file: `cp .env-dist .env`
+6. Set the SLACK_CHANNEL variable in your .env file. (or leave it as #general)
+7. Set the SLACK_TOKEN variable within the .env file using your preferred text editor.
    If you don't yet have it check the next section of this document, then come back to the
-   step #7
-7. Test the integration by running the the script disk-space-checker.sh passing 0 as the threshold for disk usage. This way, if you are using more than 0% of the disk, it should send you a message on slack.
+   step #8
+8. Test the integration by running the the script disk-space-checker.sh passing 0 as the threshold for disk usage. This way, if you are using more than 0% of the disk, it should send you a message on slack.
   `./disk-space-checker.sh 0`
 
 ### Create a Slack Bot User
