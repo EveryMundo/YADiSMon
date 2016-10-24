@@ -14,7 +14,7 @@ export N=$(df | grep -P '/$' | grep -Po '\d+%' | grep -Po '\d+');
 if [ "$N" -gt "$THRESHOLD" ]; then
   echo "$N > $THRESHOLD"
 
-  export NVM_DIR="/home/daniel/.nvm"
+  export NVM_DIR="$HOME/.nvm"
   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
   df -h | grep -P '/$' | ./disk-space-to-slack.js
