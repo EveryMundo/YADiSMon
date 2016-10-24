@@ -43,6 +43,15 @@ Without it the script will not be able to send the message to slack.
 8. Test the integration by running the the script disk-space-checker.sh passing 0 as the threshold for disk usage. This way, if you are using more than 0% of the disk, it should send you a message on slack.
   `./disk-space-checker.sh 0`
 
+##### Above Operations
+```
+git clone https://github.com/EveryMundo/YADiSMon.git
+cd YADiSMon
+npm install --prod
+mkdir logs
+cp .env-dist .env
+```
+
 ### Create a Slack Bot User
 
 * Go to https://my.slack.com/services/new/bot
