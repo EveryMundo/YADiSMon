@@ -1,8 +1,8 @@
 {
-  "name": "monitor-disk-space",
+  "name": "YADiSMon",
   "version": "0.0.1",
   "description": "Sends message to slack whenever available disk space goes over a given threshold",
-  "main": "index.js",
+  "main": "disk-space-to-slack.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
