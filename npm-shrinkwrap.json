@@ -1,0 +1,11 @@
+{
+  "name": "monitor-disk-space",
+  "version": "0.0.1",
+  "dependencies": {
+    "dotenv": {
+      "version": "2.0.0",
+      "from": "dotenv@latest",
+      "resolved": "https://registry.npmjs.org/dotenv/-/dotenv-2.0.0.tgz"
+    }
+  }
+}
