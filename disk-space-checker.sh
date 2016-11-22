@@ -10,11 +10,16 @@ cd $DIRECTORY
 
 THRESHOLD=$1
 
-export N=$(df | grep -P '/$' | grep -Po '\d+%' | grep -Po '\d+');
+export NUMBERS=$(df | grep -P '^/' | grep -Po '\d+%' | grep -Po '\d+');
 
-if [ "$N" -gt "$THRESHOLD" ]; then
-  echo "$(date) $N > $THRESHOLD"
+for N in $NUMBERS; do
+  if [ "$N" -gt "$THRESHOLD" ]; then
+    echo "$N is greater than $THRESHOLD"
+    RUN=true
+  fi
+done
 
+if [ "$RUN" != "" ]; then
   export NVM_DIR="$HOME/.nvm"
   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
